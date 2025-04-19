@@ -7,6 +7,8 @@ import ShortCircuitEval from "./components/ShortCircuitEval";
 import BasicForms from "./components/forms/BasicForms";
 import UseEffect1 from "./components/useeffects/UseEffect1";
 import UseEfect2 from "./components/useeffects/UseEfect2";
+import UnControlled from "./components/forms/UnControlled";
+import UseReducer from "./components/useReducer/UseReducer";
 const App = () => {
   const [changeText, setText] = useState("Avinash Likes React");
   const changeHeading = () => {
@@ -17,8 +19,10 @@ const App = () => {
   };
   return (
     <div>
+      {/* <UnControlled/> */}
+      <UseReducer/>
       {/* <UseEffect1/> */}
-      <UseEfect2/>
+      {/* <UseEfect2/> */}
       {/* <BasicForms/> */}
       {/* <ShortCircuitEval/> */}
       {/* <UseStateObject/> */}
