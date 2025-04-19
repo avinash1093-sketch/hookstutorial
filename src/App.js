@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React, { useState } from "react";
+import "./App.css";
+import HooksRule from "./components/HooksRule";
+import UseStateArray from "./components/UseStateArray";
+import UseStateObject from "./components/UseStateObject";
+import ShortCircuitEval from "./components/ShortCircuitEval";
+import BasicForms from "./components/forms/BasicForms";
+import UseEffect1 from "./components/useeffects/UseEffect1";
+import UseEfect2 from "./components/useeffects/UseEfect2";
+const App = () => {
+  const [changeText, setText] = useState("Avinash Likes React");
+  const changeHeading = () => {
+    let val = changeText;
+    val === "Avinash Likes React"
+      ? setText("New Text post click")
+      : setText("Avinash Likes React");
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <UseEffect1/> */}
+      <UseEfect2/>
+      {/* <BasicForms/> */}
+      {/* <ShortCircuitEval/> */}
+      {/* <UseStateObject/> */}
+      {/* <UseStateArray/> */}
+      {/* <HooksRule/>
+      <h1>{changeText}</h1>
+      <button type="submit" onClick={changeHeading}>
+        Click Me Please
+      </button> */}
     </div>
   );
-}
+};
 
 export default App;
